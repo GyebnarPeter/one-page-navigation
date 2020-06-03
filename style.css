@@ -1,0 +1,146 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    color: #8f8f8f;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    top: -100px;
+    z-index: 1000;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0.93);
+    border-bottom: 1px solid gainsboro;
+}
+@media only screen and (max-width: 800px) {
+    header {
+        height: 60px;
+    }
+}
+.sticky-header {
+    opacity: 1;
+    top: 0px;
+}
+.header-height {
+    height: 250px;
+    transition: 0.2s;
+}
+
+nav {
+    float: right;
+}
+@media only screen and (max-width: 800px) {
+    nav {
+        width: 100%;
+        text-align: center;
+        margin-top: 60px;
+        display: none;
+    }
+}
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #8f8f8f;
+    font-size: 14px;
+    padding-right: 30px;
+}
+@media only screen and (max-width: 800px) {
+    nav a {
+        display: block;
+        padding: 10px;
+    }
+}
+.nav-mobile {
+    display: block;
+}
+
+.menu-icon {
+   position: absolute;
+   top: 15px;
+   right: 40px;
+   display: none;
+   transition: 0.5s;
+   cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+    .menu-icon {
+        display: block;
+    }
+}
+.menu-icon-rotate {
+    transform: rotate(-90deg);
+}
+.menu-icon span {
+    width: 30px;
+    height: 4px;
+    background: #8f8f8f;
+    display: block;
+    margin: 5px 0;
+    border-radius: 15px;
+}
+
+.cover {
+    background: url("bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    max-width: 1920px;
+    height: 100vh;
+    max-height: 1280px;
+    margin: 0 auto;
+    line-height: 1.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.cover h1 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: white;
+    margin-bottom: 30vh;
+}
+.cover h1 span {
+    color: #e8f380;
+    border-bottom: 2px solid #e8f380;
+    font-size: 25px;
+}
+
+.mouse {
+    width: 26px;
+    height: 45px;
+    border: 2px solid #e8f380;
+    border-radius: 45%;
+}
+.mouse span {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #e8f380;
+    margin: 10px 0 0 13px;
+    display: block;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-name: scroll;
+}
+@keyframes scroll {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+main {
+    margin: 50px 15% 0 15%;
+}
+
